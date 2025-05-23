@@ -22,7 +22,7 @@ function convertSecondsToMinutes(seconds) {
 }
 
 async function getfolder() {
-    let a = await fetch(`https://earnercommunityy.github.io/songapp//music1/`,{ mode: 'no-cors' })
+    let a = await fetch(`https://musicbyme.alchosting.xyz/music1/`,{ mode: 'no-cors' })
     let div = document.createElement('div')
     let response = await a.text()
     div.innerHTML = response
@@ -72,7 +72,7 @@ async function getfolder() {
 async function getmusic(folder) {
     currfolder = folder
 
-    let a = await fetch(`https://earnercommunityy.github.io/songapp/music1/${currfolder}/`,{ mode: 'no-cors' })
+    let a = await fetch(`https://musicbyme.alchosting.xyz/music1/${currfolder}/`,{ mode: 'no-cors' })
     let div = document.createElement('div')
     let response = await a.text()
     div.innerHTML = response
