@@ -35,7 +35,7 @@ async function getfolder() {
 
     for (let index = 0; index < anchor.length; index++) {
         const element = anchor[index];
-        if (element.href.includes("http://127.0.0.1:3000/music1/") && !element.href.includes(".htaccess")) {
+        if (element.href.includes("/music1/") && !element.href.includes(".htaccess")) {
             arrfolder.push(element.href.split("/music1/")[1].split("/")[0])
         }
 
