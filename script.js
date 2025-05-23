@@ -22,7 +22,7 @@ function convertSecondsToMinutes(seconds) {
 }
 
 async function getfolder() {
-    let a = await fetch(`http://127.0.0.1:3000/music1/`,{ mode: 'no-cors' })
+    let a = await fetch(`https://earnercommunityy.github.io/songapp//music1/`,{ mode: 'no-cors' })
     let div = document.createElement('div')
     let response = await a.text()
     div.innerHTML = response
@@ -35,7 +35,7 @@ async function getfolder() {
 
     for (let index = 0; index < anchor.length; index++) {
         const element = anchor[index];
-        if (element.href.includes("http://127.0.0.1:3000/music1/") && !element.href.includes(".htaccess")) {
+        if (element.href.includes("/music1/") && !element.href.includes(".htaccess")) {
             arrfolder.push(element.href.split("/music1/")[1].split("/")[0])
         }
 
@@ -72,7 +72,7 @@ async function getfolder() {
 async function getmusic(folder) {
     currfolder = folder
 
-    let a = await fetch(`/music1/${currfolder}/`,{ mode: 'no-cors' })
+    let a = await fetch(`https://earnercommunityy.github.io/songapp/music1/${currfolder}/`,{ mode: 'no-cors' })
     let div = document.createElement('div')
     let response = await a.text()
     div.innerHTML = response
